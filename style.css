@@ -1,0 +1,60 @@
+/*Variables*/
+/* Mobile first*/
+a:link {
+  text-decoration: none;
+}
+
+p, h2 {
+  color: #7879F1;
+}
+
+body {
+  background: #f5e7f15b !important;
+}
+
+/*Navigation*/
+.navbar {
+  background: #F5E7F1;
+}
+
+.navbar-collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+}
+
+/*Cartes*/
+.card-img-top {
+  border-bottom: #F5E7F1 solid thin;
+}
+
+/* Desktop*/
+@media (min-width: 576px) {
+  /*Navigation*/
+  .navbar-collapse {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .navbar-brand {
+    margin-left: 20px;
+  }
+  .nav-text {
+    margin-right: 20px;
+  }
+  /*Cartes*/
+  .card-group {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card-group .card-img-top {
+    height: 190px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*# sourceMappingURL=style.css.map */
