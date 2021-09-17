@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/c50034a265.js" crossorigin="anonymous"></script>
+  <title>Panier - achat de peluche fait main</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+      <img src="../images/Logo_orinoco.png" width="170" height="75" alt="Logo_orinoco">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <p class="nav-text"><a class="nav-item nav-link active" href="index.html">Nos peluches<span
+              class="sr-only">(current)</span></a></p>
+        <p class="nav-text"><a class="nav-item nav-link" href="panier.html">Panier <i
+              class="fas fa-shopping-basket"></i></a></p>
+      </div>
+    </div>
+  </nav>
+
+
+  <!--Mon panier-->
+
+  <!--Contenu du panier-->
+  <div class="panier">
+    <!--Titre mon panier-->
+    <p class="panier-text row-cols-1 m-md-5 m-2 font-weight-bold">Mon panier</p>
+    <!--Détail des articles-->
+    <div class="bg_panier row border border-secondary rounded w-50 m-5">
+    <div class="card m-5">
+      <img class="card-img" src="..." alt="peluche">
+    </div>
+    <div class="card-body m-md-5 ">
+      Nom, Choix, Prix
+    </div>
+    </div>
+
+    <!--Total TTC-->    
+    <div class="bg_panier total border border-secondary rounded w-50 ml-auto mr-auto">
+      <p class="font-weight-bold text-dark p-2 m-0">Total TTC : xxx€</p>
+    </div>
+
+  </div>
+
+  <!--Coordonnées clients-->
+  <div class="coordonnées">
+    <p class="panier-text row-cols-1 m-md-5 m-2 font-weight-bold">Mes coordonnées</p>
+    <form>
+      <div class="form-row m-md-5 m-2">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+      </div>
+
+      <div class="form-row m-md-5 m-2">
+        <div class="form-group col-md-6">
+          <label for="inputLastName4">Nom</label>
+          <input type="name" class="form-control" id="inputLastName4" placeholder="Nom">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="inputFirstName4">Prénom</label>
+          <input type="name" class="form-control" id="inputFirstName4" placeholder="Prénom">
+        </div>
+      </div>
+
+
+      <div class="form-group m-md-5 m-2">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="8 avenue des champs Elysée">
+      </div>
+      <div class="form-group m-md-5 m-2">
+        <label for="inputAddress2">Address 2</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Appartement, Etage...">
+      </div>
+      <div class="form-row m-md-5 m-2">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Ville</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputCountry">Pays</label>
+          <input type="text" class="form-control" id="inputCountry">
+          </select>
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputZip">Code postal</label>
+          <input type="text" class="form-control" id="inputZip">
+
+        </div>
+      </div>
+
+      <div class="col-md-5 m-md-5 mb-5">
+        <button type="submit" class="btn select text-white">Valider</button>
+      </div>
+    </form>
+  </div>
+
+
+</body>
+
+<footer class="page-footer border-top">
+
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span class="text">Retrouvez-nous sur nos réseaux sociaux !</span>
+    </div>
+
+    <ul class="nav col col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-facebook-f" width="24"
+            height="24"></i> </a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-twitter" width="24"
+            height="24"></i></a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-instagram" width="24"
+            height="24"></i></a></li>
+      <li class="ml-3 text text-footer"> <a class="text-footer" href="#"> Contact</a></li>
+    </ul>
+
+
+  </section>
+
+
+</footer>
+
+
+
+
+</html>

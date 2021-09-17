@@ -1,11 +1,14 @@
 /*Variables*/
 $primary: #F5E7F1;
-$secondary: #7879F1;
+$secondary: #5455BA;
 $tertiaire:#A44288;
+$btn-bgcolor: linear-gradient(to top left, $secondary 10%, $tertiaire);
 
 /* Mobile first*/
-
-a:link 
+.text{
+    color: $secondary;
+}
+a
 { 
  text-decoration:none; 
 } 
@@ -29,45 +32,70 @@ body{
     &-brand{
         margin-left: 20px;
     }
-
-}
-
-/*Cartes*/
-
-.card{
-    &-img-top{
-        border-bottom: $primary solid thin;
+    &-toggler{
+        background: $btn-bgcolor;
+        outline: $primary;
+        &:hover{
+            outline: $primary;
+            text-decoration: $primary solid;
+        }
     }
-}
-/* Desktop*/
 
-@media (min-width: 576px){
-/*Navigation*/
-
-.navbar{
-    &-collapse{
-        justify-content:flex-end;
-    }
-    &-brand{
-        margin-left: 20px;
-    }
 }
 
 .nav-text{
     margin-right: 20px;
 }
 
-/*Cartes*/
 
-.card-group{
-    flex-wrap: wrap;
-    .card{
-        &-img-top{
-            height: 190px;
-            object-fit: cover;
-        }
+/*Boutons fiche produit */
+
+
+.btn{
+    align-items: center;
+    justify-content: center;
+}
+.select{
+    background: $btn-bgcolor;
+    color: lightgrey;
+    box-shadow: 0px 2px 5px 1px lightgrey;
+    border: 1px $primary;
+    color: #080808cf;
+    border-radius: 5px;
+    width: 50%;
+    align-items: center;
+
+}
+
+/*Panier*/
+
+.panier-text{
+    color: $tertiaire;
+    font-size: 30px;
+    
+    }
+
+.bg_panier{
+    background-color:  #e7e2e5!important;
+}
+
+/*Confirmation*/
+
+
+.confirmation{
+    margin-top: 15rem;
+    margin-bottom: 15rem;
+
+}
+/*footer*/
+footer{
+    background-color: $primary;
+}
+.text-footer{
+    color: $secondary;
+    &:hover{
+        text-decoration: none;
+        color:$tertiaire;
     }
 }
 
-
-}

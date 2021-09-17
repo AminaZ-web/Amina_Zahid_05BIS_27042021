@@ -1,11 +1,15 @@
 /*Variables*/
 /* Mobile first*/
-a:link {
+.text {
+  color: #5455BA;
+}
+
+a {
   text-decoration: none;
 }
 
 p, h2 {
-  color: #7879F1;
+  color: #5455BA;
 }
 
 body {
@@ -27,34 +31,74 @@ body {
   margin-left: 20px;
 }
 
-/*Cartes*/
-.card-img-top {
-  border-bottom: #F5E7F1 solid thin;
+.navbar-toggler {
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(10%, #5455BA), to(#A44288));
+  background: linear-gradient(to top left, #5455BA 10%, #A44288);
+  outline: #F5E7F1;
 }
 
-/* Desktop*/
-@media (min-width: 576px) {
-  /*Navigation*/
-  .navbar-collapse {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .navbar-brand {
-    margin-left: 20px;
-  }
-  .nav-text {
-    margin-right: 20px;
-  }
-  /*Cartes*/
-  .card-group {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .card-group .card-img-top {
-    height: 190px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
+.navbar-toggler:hover {
+  outline: #F5E7F1;
+  -webkit-text-decoration: #F5E7F1 solid;
+          text-decoration: #F5E7F1 solid;
+}
+
+.nav-text {
+  margin-right: 20px;
+}
+
+/*Boutons fiche produit */
+.btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.select {
+  background: -webkit-gradient(linear, right bottom, left top, color-stop(10%, #5455BA), to(#A44288));
+  background: linear-gradient(to top left, #5455BA 10%, #A44288);
+  color: lightgrey;
+  -webkit-box-shadow: 0px 2px 5px 1px lightgrey;
+          box-shadow: 0px 2px 5px 1px lightgrey;
+  border: 1px #F5E7F1;
+  color: #080808cf;
+  border-radius: 5px;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Panier*/
+.panier-text {
+  color: #A44288;
+  font-size: 30px;
+}
+
+.bg_panier {
+  background-color: #e7e2e5 !important;
+}
+
+/*Confirmation*/
+.confirmation {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+}
+
+/*footer*/
+footer {
+  background-color: #F5E7F1;
+}
+
+.text-footer {
+  color: #5455BA;
+}
+
+.text-footer:hover {
+  text-decoration: none;
+  color: #A44288;
 }
 /*# sourceMappingURL=style.css.map */

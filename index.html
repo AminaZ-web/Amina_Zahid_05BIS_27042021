@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <!--Bootsrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!--Font Awesome-->
   <script src="https://kit.fontawesome.com/c50034a265.js" crossorigin="anonymous"></script>
-  <title>Orinoco - achat de peluche fait main</title>
+  <!--Style-->
+  <link rel="stylesheet" href="style.css">
+  <title>Acceuil Orinoco - achat de peluche fait main</title>
 </head>
 
 <body>
 
+  <header>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
     <a class="navbar-brand" href="index.html">
       <img src="../images/Logo_orinoco.png" width="170" height="75" alt="Logo_orinoco">
     </a>
@@ -27,102 +31,100 @@
       <div class="navbar-nav">
         <p class="nav-text"><a class="nav-item nav-link active" href="index.html">Nos peluches<span
               class="sr-only">(current)</span></a></p>
-        <p class="nav-text"><a class="nav-item nav-link" href="panier.html">Panier <i
-              class="fas fa-shopping-basket"></i></a></p>
+        <p class="nav-text"><a class="nav-item nav-link" href="panier.html">Panier <i class="fas fa-shopping-basket"></i></a></p>
       </div>
     </div>
   </nav>
+</header>
 
   <!-- Carte -->
-
-  <div class="card-group">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 m-3">
     <!-- Carte 1 -->
-    <div class="card">
-      <a href="fiche_produit.html" class="card-link">
-        <img class="card-img-top" src="images/teddy_1.jpg" alt="Peluche 1">
+    <div class="col py-3">
+      <div class="card shadow-sm">
+        <a href="fiche_produit.html">
+        <img class= "card-img-top border rounded"src="../images/teddy_1.jpg" alt="Peluche fait main 1" height="251px">
+        </a>
         <div class="card-body">
-          <h2 class="card-title">Nom</h5>
-            <p class="card-text">Description</p>
-            <p class="card-price">Prix</p>
+          <p class="card-text">Nom</p>
+          <p class="card-text">Description</p>
+          <p class="card-text">Prix</p>
         </div>
-      </a>
+      </div>
     </div>
     <!-- Carte 2 -->
-    <div class="card">
-      <a href="fiche_produit.html" class="card-link">
-        <img class="card-img-top" src="images/teddy_2.jpg" alt="Peluche 1">
+    <div class="col py-3">
+      <div class="card shadow-sm">
+        <a href="fiche_produit.html">
+        <img class= "card-img-top border rounded"src="../images/teddy_2.jpg" alt="Peluche fait main 2" height="251px">
+        </a>
         <div class="card-body">
-          <h2 class="card-title">Nom</h5>
-            <p class="card-text">Description</p>
-            <p class="card-price">Prix</p>
+          <p class="card-text">Nom</p>
+          <p class="card-text">Description</p>
+          <p class="card-text">Prix</p>
         </div>
-      </a>
+      </div>
     </div>
-
     <!-- Carte 3-->
-    <div class="card">
-      <a href="fiche_produit.html" class="card-link">
-        <img class="card-img-top" src="images/teddy_3.jpg" alt="Peluche 1">
+    <div class="col py-3">
+      <div class="card shadow-sm">
+        <a href="fiche_produit.html">
+        <img class= "card-img-top border rounded"src="../images/teddy_3.jpg" alt="Peluche fait main 3" height="251px">
+        </a>
         <div class="card-body">
-          <h2 class="card-title">Nom</h5>
-            <p class="card-text">Description</p>
-            <p class="card-price">Prix</p>
+          <p class="card-text">Nom</p>
+          <p class="card-text">Description</p>
+          <p class="card-text">Prix</p>
         </div>
-      </a>
+      </div>
     </div>
-
-    <!-- Carte 4-->
-    <div class="card">
-      <a href="fiche_produit.html" class="card-link">
-        <img class="card-img-top" src="images/teddy_4.jpg" alt="Peluche 1">
-        <div class="card-body">
-          <h2 class="card-title">Nom</h5>
-            <p class="card-text">Description</p>
-            <p class="card-price">Prix</p>
-        </div>
+  <!-- Carte 4 -->
+  <div class="col py-3">
+    <div class="card shadow-sm">
+      <a href="fiche_produit.html">
+      <img class= "card-img-top border rounded"src="../images/teddy_4.jpg" alt="Peluche fait main 4" height="251px">
       </a>
-    </div>
-
-    <!-- Carte 5-->
-    <div class="card">
-      <a href="fiche_produit.html" class="card-link">
-        <img class="card-img-top" src="images/teddy_5.jpg" alt="Peluche 1">
-        <div class="card-body">
-          <h2 class="card-title">Nom</h5>
-            <p class="card-text">Description</p>
-            <p class="card-price">Prix</p>
-        </div>
-      </a>
+      <div class="card-body">
+        <p class="card-text">Nom</p>
+        <p class="card-text">Description</p>
+        <p class="card-text">Prix</p>
+      </div>
     </div>
   </div>
+    <!-- Carte 5 -->
+    <div class="col py-3">
+      <div class="card shadow-sm">
+        <a href="fiche_produit.html">
+        <img class= "card-img-top border rounded"src="../images/teddy_5.jpg" alt="Peluche fait main 5" height="251px">
+        </a>
+        <div class="card-body">
+          <p class="card-text">Nom</p>
+          <p class="card-text">Description</p>
+          <p class="card-text">Prix</p>
+        </div>
+      </div>
+    </div>
+    </div>
 </body>
 
 <!-- Footer -->
-<footer class="page-footer bg-light text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <!-- Left -->
-    <div class="me-5 d-none d-lg-block">
-      <span>Retrouvez-nous sur nos réseaux sociaux !</span>
-    </div>
-    <!-- Left -->
+<footer class="page-footer border-top">
 
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <span>Contact</span>
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span class="text">Retrouvez-nous sur nos réseaux sociaux !</span>
     </div>
-    <!-- Right -->
+
+    <ul class="nav col col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-facebook-f" width="24" height="24"></i> </a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-twitter" width="24" height="24"></i></a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-instagram" width="24" height="24"></i></a></li>
+      <li class="ml-3 text text-footer"> <a class="text-footer" href="#"> Contact</a></li>
+    </ul>
+
+   
   </section>
-  <!-- Section: Social media -->
+  
 
 </footer>
 
