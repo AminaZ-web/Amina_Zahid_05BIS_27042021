@@ -47,6 +47,23 @@ body {
   margin-right: 20px;
 }
 
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #5455BA !important;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* Cartes*/
+.card {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
 /*Boutons fiche produit */
 .btn {
   -webkit-box-align: center;
@@ -55,9 +72,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.select {
+.btn:hover {
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(10%, #A44288), to(#5455BA));
+  background: linear-gradient(to bottom left, #A44288 10%, #5455BA);
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+}
+
+.select, .btn {
   background: -webkit-gradient(linear, right bottom, left top, color-stop(10%, #5455BA), to(#A44288));
   background: linear-gradient(to top left, #5455BA 10%, #A44288);
   color: lightgrey;

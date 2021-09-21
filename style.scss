@@ -47,6 +47,22 @@ body{
     margin-right: 20px;
 }
 
+.navbar-light .navbar-nav .nav-link:hover{
+        color: $secondary!important;
+        transform: scale(1.1);
+}
+
+
+/* Cartes*/
+
+.card{
+    transition:0.5s;
+
+    &:hover{
+    transform: scale(1.06);
+    
+    }
+}
 
 /*Boutons fiche produit */
 
@@ -54,8 +70,16 @@ body{
 .btn{
     align-items: center;
     justify-content: center;
+    transition:1s;
 }
-.select{
+
+.btn:hover{
+    background: linear-gradient(to bottom left, $tertiaire 10%, $secondary ) ;
+    transform: scale(1.06);
+    
+
+}
+.select, .btn{
     background: $btn-bgcolor;
     color: lightgrey;
     box-shadow: 0px 2px 5px 1px lightgrey;
@@ -98,4 +122,6 @@ footer{
         color:$tertiaire;
     }
 }
+
+
 
