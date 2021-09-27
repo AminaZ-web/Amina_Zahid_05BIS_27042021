@@ -1,0 +1,1 @@
+// Faire en sorte que le total s'actualise à chaque changement dans le panier

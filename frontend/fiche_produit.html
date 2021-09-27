@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="site de commerce en ligne avec spécialisation comme la vente de peluche fait main">
+  <meta name="keywords" content="peluche, fait main, France, commerce, e-commerce">
+  <!-- Style -->
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Font -->
+  <script src="https://kit.fontawesome.com/c50034a265.js" crossorigin="anonymous"></script>
+  <!--JS-->
+  <script src="../server.js"></script>
+  <script src="../app.js"></script>
+  <script src="/controllers/teddy.js"></script>
+  <script src="../JS/produit.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous">
+    </script>
+  <!-- Titre -->
+  <title>Fiche produit - achat de peluche fait main</title>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="../index.html">
+      <img src="../images/Logo_orinoco.png" width="170" height="75" alt="Logo_orinoco">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <p class="nav-text"><a class="nav-item nav-link" href="../index.html">Nos peluches<span
+              class="sr-only">(current)</span></a></p>
+        <p class="nav-text"><a class="nav-item nav-link" href="./panier.html">Panier <i
+              class="fas fa-shopping-basket"></i></a></p>
+      </div>
+    </div>
+  </nav>
+
+  <!--Card-->
+
+  <div class="row row-cols-md-3 m-3">
+
+    <div class="row m-2 m-lg-5">
+      <div class="card shadow-sm rounded-circle">
+        <a href="fiche_produit.html">
+          <img class="card-img-top rounded-circle" src="../images/teddy_1.jpg" alt="Peluche fait main 1" width="100%">
+        </a>
+      </div>
+    </div>
+
+
+    <div class="col m-md-5 m-2 p-0">
+      <p class="card-text">Nom</p>
+      <p class="card-text">Description</p>
+      <p class="card-text">Prix</p>
+    </div>
+
+  </div>
+  <!--Choix déroulant-->
+  <form action="post" class="col col-md-10 mb-5">
+    <label for="options" class="row col d-flex mb-3">
+      <span id="option-label" class="col text-md-right ps-0">Choix option : </span>
+      <select name="options" id="option-select" class="form-select col select text-white">
+        <option value="" class="selected">Selectionez une couleur</option>
+        <option value="Tan" id="tan">Tan</option>
+        <option value="Chocolate" id="chocolate">Chocolate</option>
+        <option value="Black" id="black">Black</option>
+        <option value="White" id="parrot">Parrot</option>
+      </select>
+    </label>
+    <label for="quantityInput" class="row col d-flex mb-3">
+      <span id="quantity-label" class="col text-md-right">Quantité : </span>
+      <input id="quantityInput" type="number" class="form-control col select text-white" min="1" value="1">
+    </label>
+
+
+    <div class="col-md-5 ml-auto mr-auto">
+      <button class="btn select col mb-4 text-white" id="addToCart">Ajouter au panier</button>
+    </div>
+  </form>
+
+</body>
+
+<!-- Footer -->
+<footer class="page-footer border-top">
+  <a class="navbar-btext-center d-flex justify-content-center" href="index.html">
+    <img src="../images/Logo_orinoco.png" width="170" height="75" alt="Logo_orinoco">
+  </a>
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+      <span class="text">Retrouvez-nous sur nos réseaux sociaux !</span>
+    </div>
+
+    <ul class="nav col col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-facebook-f" width="24"
+            height="24"></i> </a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-twitter" width="24"
+            height="24"></i></a></li>
+      <li class="ml-3 text text-footer"><a class="text-footer" href="#"><i class="fab fa-instagram" width="24"
+            height="24"></i></a></li>
+      <li class="ml-3 text text-footer"> <a class="text-footer" href="#"> Contact</a></li>
+    </ul>
+
+
+  </section>
+
+
+</footer>
+
+</html>
