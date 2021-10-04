@@ -7,6 +7,7 @@ async function getTeddies(){
     })
     .then(function (value) {
         console.table(value);
+        displayTeddies(value);
     })
     .catch(function (err) {
         // Une erreur est survenue
