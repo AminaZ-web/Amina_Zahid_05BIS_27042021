@@ -8,6 +8,7 @@ async function getTeddies(){
     .then(function (value) {
         console.table(value);
         displayTeddies(value);
+        saveInLocalStorage(value);
     })
     .catch(function (err) {
         // Une erreur est survenue
@@ -20,13 +21,13 @@ function displayTeddies (response){
         divTeddies.innerHTML += `
         <div class="col py-3">
       <div class="card shadow-sm">
-        <a href="/frontend/fiche_produit.html">
-          <img class="card-img-top border rounded" src="../images/teddy_1.jpg" alt="Peluche fait main 1" height="251px">
+        <a href="/frontend/fiche_produit.html?id=${response[i]._id}">
+          <img class="card-img-top border rounded" src="${response[i].imageUrl}" alt="Peluche fait main 1" height="251px">
         </a>
         <div class="card-body">
-          <p class="card-text">Nom</p>
-          <p class="card-text">Description</p>
-          <p class="card-text">Prix</p>
+          <p class="card-text">${response[i].name}</p>
+          <p class="card-text">${response[i].description}</p>
+          <p class="card-text">${response[i].price /100}€</p>
         </div>
       </div>
     </div>`;
@@ -35,21 +36,22 @@ function displayTeddies (response){
 
 }
 
- async function main(){
-    const teddies = await getTeddies();
-    let waiting ;
-    clearInterval(waiting);
-    waiting = setInterval (function(){
-        if (teddies != undefined){
-            displayTeddies(teddies);
-        } 
-    }, 20 )
- //   displayTeddies(teddies)
+function saveInLocalStorage(teddies){
+    localStorage.setItem("teddies",JSON.stringify(teddies));
 
 }
 
 
+ async function main(){
+    const teddies = await getTeddies();
+    
+}
+
+
+
+
 main();
+
 
 
 
