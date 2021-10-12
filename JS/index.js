@@ -20,7 +20,7 @@ function displayTeddies (response){
     for(let i = 0; i < response.length; i++){
         divTeddies.innerHTML += `
         <div class="col py-3">
-      <div class="card shadow-sm">
+        <div class="card shadow-sm">
         <a href="/frontend/fiche_produit.html?id=${response[i]._id}">
           <img class="card-img-top border rounded" src="${response[i].imageUrl}" alt="Peluche fait main 1" height="251px">
         </a>
@@ -47,6 +47,9 @@ function saveInLocalStorage(teddies){
     
 }
 
+function initBasket(){
+    localStorage.setItem('panier','');
+}
 
 
 
