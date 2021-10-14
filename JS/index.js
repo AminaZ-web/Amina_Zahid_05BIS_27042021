@@ -48,7 +48,7 @@ function saveInLocalStorage(teddies){
 }
 
 function initBasket(){
-    localStorage.setItem('panier','');
+    localStorage.setItem('basket','');
 }
 
 

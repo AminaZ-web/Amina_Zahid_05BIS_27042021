@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>cartNumbers()
+<head>
   <!-- Meta -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +15,7 @@
   <!-- Font -->
   <script src="https://kit.fontawesome.com/c50034a265.js" crossorigin="anonymous"></script>
   <!--JS-->
-  <script src="../server.js"></script>
-  <script src="../app.js"></script>
-  <script src="/controllers/teddy.js"></script>
-  <script src="../panier.js"></script>
-  <script src="../JS/produit.js"></script>
+  <script src="../JS/panier.js"></script>
 
   <!-- Titre -->
   <title>Panier - achat de peluche fait main</title>
@@ -50,17 +46,27 @@
   <!--Mon panier-->
 
 
-  <table class="table">
-    <thead">
+  <table class="table" id="table">
+    <thead>
       <tr>
         <th>Article</th>
         <th>Prix</th>
         <th>Quantité</th>
       </tr>
       </thead>
-      <tbody id="cart-tablebody"></tbody>
+      
+      <tbody id="cart-tablebody">
+        <td> <img class="card-img-top border rounded" src="${response[i].imageUrl}" alt="Peluche fait main 1" height="251px">
+        <p class="card-text"> ${response[i].name}></p> </td>
+        <td class="card-text">${response[i].price /100}€</td>
+      </tbody>
   </table>
 
+
+
+
+
+  
   <p class="total mr-5">Total : <span class="total"></span>€</p>
 
 
