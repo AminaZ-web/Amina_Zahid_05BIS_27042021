@@ -26,24 +26,27 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
     <a class="navbar-brand" href="../index.html">
       <img src="../images/Logo_orinoco.png" width="170" height="75" alt="Logo_orinoco">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
       <div class="navbar-nav">
-        <p class="nav-text"><a class="nav-item nav-link" href="../index.html">Nos peluches<span
-              class="sr-only">(current)</span></a></p>
-        <p class="nav-text"><a class="nav-item nav-link" href="./panier.html">Panier <i
-              class="fas fa-shopping-basket"></i></a></p>
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Nos peluches <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <p id="basketNumber">0</p>
+          <a class="nav-link cart" href="/frontend/panier.html">Panier<i class="fas fa-shopping-basket ml-2"></i></a>
+        </li>
       </div>
     </div>
   </nav>
-
+</header>
   <!--Card-->
 
   <div class="row row-cols-md-3 m-3" id="teddy">

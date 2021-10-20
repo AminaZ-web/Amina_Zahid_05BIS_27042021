@@ -116,6 +116,22 @@ body {
   text-align: end;
 }
 
+.fa-shopping-basket {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+#basketNumber {
+  position: absolute;
+  font-size: 10px;
+  color: white !important;
+  padding: 3px 5px;
+  background-color: #A44288;
+  border-radius: 50%;
+  right: 33px;
+  top: 28px;
+}
+
 /*Confirmation*/
 .confirmation {
   margin-top: 15rem;

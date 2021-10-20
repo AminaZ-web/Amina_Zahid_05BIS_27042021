@@ -14,11 +14,14 @@ function main() {
     const teddy = getTeddy(idTeddy);
     displayTeddy(teddy);
     document.getElementById('addToCart').addEventListener('click',() => {
-        let teddyInCart = [{
+        let teddyInCart = {
             name: teddy.name,
-            quantity: document.getElementById('quantityInput').value,
-            price: teddy.price
-        }]
+            // parseInt pour convertir la chaune de caractère quantityInput en entier.
+            quantity: parseInt(document.getElementById('quantityInput').value),
+            price: teddy.price, 
+            // On ajoute le ID chaque element à un id propre à lui
+            _id: teddy._id
+        }
         addToCart(teddyInCart);
     });
   }
@@ -49,6 +52,7 @@ function getParam(str){
     //console.log(name);
 }
 
+// Fcr qui afficje le teddy
 function displayTeddy(teddy) {
     let divTeddy = document.getElementById('teddy');
     divTeddy.innerHTML = 
@@ -68,24 +72,34 @@ function displayTeddy(teddy) {
 // Fct qui crée et ajoute au panier (basket)
 function addToCart(teddy){
     let basket = localStorage.getItem('basket');
-    //let oldBasket = localStorage.getItem('basket',JSON.parse(basket));
     if (basket == null){
-        basket = teddy;
+        // Basket = tableau de teddy donc basket est un tableau mnt
+        basket = [teddy];
         localStorage.setItem('basket',JSON.stringify(basket));
     } 
 
-   else if(basket != null) {
+   else {
         // S'il n'est pas vide
   
-        //  rajouter les informations de l'ancien panier au tableau teddy ? //  Récupérer les informations du teddy affiché et le mettre dans un tableau 
-     
-        for (let i = 0 ; basket = teddy ; i++){
-         teddy.push(basket[i]);
-        //  localStorage.setItem('basket',(basket));
+        //  Récupérer les informations du panier     
+        basket = JSON.parse(basket);
+        // si dans le panier il n'y a pas le même teddy que je veux ajouter = false
+        let isInBasket =  false; 
+        // Faire une boucle pour parcourir le tableau, si teddy qu'on veut ajouter à le meme meme id que celui du panier, on ajoute que la quantité 
+        for (let i = 0; i < basket.length; i++){
+            // teddy est un objet donc pour parcourir un objet on utulise le point
+            // Basket est un tableau donc c'est pour ca qu'on va mettre des crochet
+            if (teddy._id == basket[i]._id){
+                basket[i].quantity += teddy.quantity;
+                // si dans mon panier il y a déjà le teddy que je veux ajouter, alors true
+                isInBasket = true;
+            }
+
         }
-  
-        //  passer le tableau en JSON et le mettre dans le localStorage   
-        localStorage.setItem('basket',(basket));
+        // Si le teddy n'est pas dans le panier, alors on ajoute le teddy dans le basket. (!isInBasket)= not isInBasket
+        if (!isInBasket) basket.push(teddy);
+        //  passer le tableau en JSON et le mettre dans le localStorage  
+        localStorage.setItem('basket',JSON.stringify(basket));
       }
      
  

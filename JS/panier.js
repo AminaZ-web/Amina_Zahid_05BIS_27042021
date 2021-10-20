@@ -2,41 +2,33 @@
 
 // Depuis la page Panier, récupérer le panier (l’array) via localStorage.
 
-
-
 function main() {
-    const basket = getBasket();
-    getBasket(basket);
-    
+    getBasket();
+    displayBasket();
+    console.log(basket,'log1')
   }
 
 main();
 
-function getBasket(basket){
-    let basketFromLocalStorage = localStorage.getItem("basket");
-    basketFromLocalStorage = JSON.parse(basketFromLocalStorage);
-    for (let i = 0; i < basketFromLocalStorage.length; i++){
-        if (basket == basketFromLocalStorage[i]){
-            return basketFromLocalStorage[i]
-        }
-    }
-
-    return null
-}
+// Attention, ici teddy n'existe pas
 
 function displayBasket(){
+    let basket = localStorage.getItem('basket');
     let divBasket = document.getElementById('table');
     divBasket.innerHTML += `
-        <div class="col py-3">
-        <div class="card shadow-sm">
-   
-          <img class="card-img-top border rounded" src="${response[i].imageUrl}" alt="Peluche fait main 1" height="251px">
-       
-        <div class="card-body">
-          <p class="card-text">${response[i].name}</p>
-          <p class="card-text">${response[i].description}</p>
-          <p class="card-text">${response[i].price /100}€</p>
-        </div>
-      </div>
-    </div>`
+    <thead>
+    <tr>
+      <th>Article</th>
+      <th>Prix</th>
+      <th>Quantité</th>
+    </tr>
+    </thead>
+    
+    <tbody id="cart-tablebody">
+
+      <td> <img class="card-img-top border rounded" src="${teddy[i].imageUrl}" alt="Peluche fait main 1" height="251px">
+      <p class="card-text"> ${teddy[i].name}></p> </td>
+      <td class="card-text">${teddy[i].price /100}€</td>
+    </tbody>`
+    console.log(basket,'log3')
 }
