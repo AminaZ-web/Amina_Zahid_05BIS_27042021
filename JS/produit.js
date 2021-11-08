@@ -9,6 +9,8 @@ const teddy = getTeddy();
     * displayTeddy qui affiche tte les info d'un teddy
     * addToCart qui crée et ajoute au panier (basket) en réaction à l'evt click
 */
+
+
 function main() {
     let idTeddy = getParam(window.location.href);
     const teddy = getTeddy(idTeddy);
@@ -16,15 +18,17 @@ function main() {
     document.getElementById('addToCart').addEventListener('click',() => {
         let teddyInCart = {
             name: teddy.name,
-            // parseInt pour convertir la chaune de caractère quantityInput en entier.
+            // parseInt pour convertir la chaine de caractère quantityInput en entier.
             quantity: parseInt(document.getElementById('quantityInput').value),
             price: teddy.price, 
             // On ajoute le ID chaque element à un id propre à lui
             _id: teddy._id
         }
         addToCart(teddyInCart);
+        cartNumber();
     });
-  }
+  
+}
   
 // Attend que tout le DOM se charge avant d'appeler la fct main ()
   window.addEventListener("DOMContentLoaded", (event) => {
@@ -52,7 +56,7 @@ function getParam(str){
     //console.log(name);
 }
 
-// Fcr qui afficje le teddy
+// Fct qui affiche le teddy
 function displayTeddy(teddy) {
     let divTeddy = document.getElementById('teddy');
     divTeddy.innerHTML = 
@@ -87,7 +91,7 @@ function addToCart(teddy){
         let isInBasket =  false; 
         // Faire une boucle pour parcourir le tableau, si teddy qu'on veut ajouter à le meme meme id que celui du panier, on ajoute que la quantité 
         for (let i = 0; i < basket.length; i++){
-            // teddy est un objet donc pour parcourir un objet on utulise le point
+            // teddy est un objet donc pour parcourir un objet on utilise le point
             // Basket est un tableau donc c'est pour ca qu'on va mettre des crochet
             if (teddy._id == basket[i]._id){
                 basket[i].quantity += teddy.quantity;
@@ -104,3 +108,5 @@ function addToCart(teddy){
      
  
 }
+
+

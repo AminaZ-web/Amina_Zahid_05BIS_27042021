@@ -44,6 +44,7 @@ function saveInLocalStorage(teddies){
 
  async function main(){
     const teddies = await getTeddies();
+    cartNumber();
     
 }
 
